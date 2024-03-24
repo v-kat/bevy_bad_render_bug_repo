@@ -1,0 +1,4 @@
+[tools]
+wasm_bindgen = "0.2.91"
+sass = "1.63.3"
+wasm_opt = "116"
