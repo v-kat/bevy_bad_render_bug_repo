@@ -24,7 +24,10 @@ fn setup(mut commands: Commands) {
 }
 
 fn test_system(mut commands: Commands, asset_server: Res<AssetServer>) {
-    let img_handle = asset_server.load("tester.webp");
+    let mut img_handle = asset_server.load("tester.webp");
+    for x in 10..20 {
+        img_handle = asset_server.load(format!("tester{}.webp", x));
+    }
 
     commands.spawn(SpriteBundle {
         texture: img_handle,
